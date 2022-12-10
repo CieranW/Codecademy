@@ -17,8 +17,8 @@ class School:
         self.numberOfStudents = newnumberOfStudents
 
     def __repr__(self):
-        phrase = print("A {level} school named {name} with {numberOfStudents} students.".format(
-            level=self.level, name=self.name, numberOfStudents=self.numberOfStudents))
+        phrase = "A {level} school named {name} with {numberOfStudents} students.".format(
+            level=self.level, name=self.name, numberOfStudents=self.numberOfStudents)
         return phrase
 
 
@@ -32,9 +32,9 @@ class PrimarySchool(School):
 
     def __repr__(self):
         phrase = super().__repr__()
-        add_phrase = print("The pickup policy is {pickupPolicy}".format(
-            pickupPolicy=self.pickupPolicy))
-        return phrase, add_phrase
+        add_phrase = "The pickup policy is {pickupPolicy}".format(
+            pickupPolicy=self.pickupPolicy)
+        return phrase + add_phrase
 
 
 class HighSchool(School):
@@ -47,7 +47,7 @@ class HighSchool(School):
 
     def __repr__(self):
         phrase = super().__repr__()
-        return phrase, "\nWe have the following sports teams: {sportsTeams}.".format(sportsTeams=self.sportsTeams)
+        return phrase + "\nWe have the following sports teams: {sportsTeams}.".format(sportsTeams=self.sportsTeams)
 
 
 a = School("Dat'sNuts", "High", 420)
