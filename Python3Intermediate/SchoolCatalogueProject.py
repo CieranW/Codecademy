@@ -52,4 +52,8 @@ class HighSchool(School):
 
 c = HighSchool("MyNuts", 89890, ["Football",
                "Basketball", "Swimming", "Volleyball"])
-print(c)
+try:
+    print(c)
+except TypeError:
+    # Code throws up an type error if I don't put this try clause in. Still trying to figure out why.
+    print("Fuck this shit bro, why won't it work?? Keeps giving me an error.")
