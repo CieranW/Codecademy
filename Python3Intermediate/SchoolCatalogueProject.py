@@ -34,7 +34,7 @@ class PrimarySchool(School):
         phrase = super().__repr__()
         add_phrase = print("The pickup policy is {pickupPolicy}".format(
             pickupPolicy=self.pickupPolicy))
-        return phrase + add_phrase
+        return phrase, add_phrase
 
 
 class HighSchool(School):
@@ -50,6 +50,10 @@ class HighSchool(School):
         return phrase, "\nWe have the following sports teams: {sportsTeams}.".format(sportsTeams=self.sportsTeams)
 
 
+a = School("Dat'sNuts", "High", 420)
+print(a)
+b = PrimarySchool("DeezNuts", 690, "Pickup Allowed.")
+print(b)
 c = HighSchool("MyNuts", 89890, ["Football",
                "Basketball", "Swimming", "Volleyball"])
 print(c)
