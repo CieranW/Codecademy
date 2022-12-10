@@ -31,10 +31,10 @@ class PrimarySchool(School):
         return self.pickupPolicy
 
     def __repr__(self):
-        parentRepr = super().__repr__()
+        phrase = super().__repr__()
         add_phrase = print("The pickup policy is {pickupPolicy}".format(
             pickupPolicy=self.pickupPolicy))
-        return parentRepr + add_phrase
+        return phrase + add_phrase
 
 
 class HighSchool(School):
@@ -46,14 +46,15 @@ class HighSchool(School):
         return self.sportsTeams
 
     def __repr__(self):
-        parentRepr = super().__repr__()
-        return parentRepr, "We have the following sports teams: {sportsTeams}.".format(sportsTeams=self.sportsTeams)
+        phrase = super().__repr__()
+        return phrase, "\nWe have the following sports teams: {sportsTeams}.".format(sportsTeams=self.sportsTeams)
 
 
 c = HighSchool("MyNuts", 89890, ["Football",
                "Basketball", "Swimming", "Volleyball"])
-try:
-    print(c)
-except TypeError:
-    # Code throws up an type error if I don't put this try clause in. Still trying to figure out why.
-    print("Fuck this shit bro, why won't it work?? Keeps giving me an error.")
+print(c)
+# try:
+#     print(c)
+# except TypeError:
+#     # Code throws up an type error if I don't put this try clause in. Still trying to figure out why.
+#     print("Fuck this shit bro, why won't it work?? Keeps giving me an error.")
