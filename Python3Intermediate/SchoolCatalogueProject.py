@@ -47,7 +47,7 @@ class HighSchool(School):
 
     def __repr__(self):
         phrase = super().__repr__()
-        return phrase, "\nWe have the following sports teams: {sportsTeams}.".format(sportsTeams=self.sportsTeams)
+        return phrase, "We have the following sports teams: {sportsTeams}.".format(sportsTeams=self.sportsTeams)
 
 
 a = School("Dat'sNuts", "High", 420)
